@@ -3,7 +3,7 @@
 #
 # Default value: supybot
 ###
-supybot.nick: bot-pinoss
+supybot.nick: planet-news
 
 ###
 # Determines what alternative nicks will be used if the primary nick
@@ -63,7 +63,7 @@ supybot.networks.freenode.servers: irc.freenode.net:8001
 #
 # Default value:  
 ###
-supybot.networks.freenode.channels: ##pinoss-test
+supybot.networks.freenode.channels: #timvideos
 
 ###
 # Determines what key (if any) will be used to join the channel.
@@ -500,12 +500,6 @@ supybot.commands.nested.pipeSyntax: False
 # Determines what commands have default plugins set, and which plugins
 # are set to be the default for each of those commands.
 ###
-supybot.commands.defaultPlugins.addcapability: Admin
-supybot.commands.defaultPlugins.capabilities: User
-supybot.commands.defaultPlugins.disable: Owner
-supybot.commands.defaultPlugins.enable: Owner
-supybot.commands.defaultPlugins.help: Misc
-supybot.commands.defaultPlugins.ignore: Admin
 
 ###
 # Determines what plugins automatically get precedence over all other
@@ -517,10 +511,6 @@ supybot.commands.defaultPlugins.ignore: Admin
 # Default value: Plugin Admin Misc User Owner Config Channel
 ###
 supybot.commands.defaultPlugins.importantPlugins: Plugin Admin Misc User Owner Config Channel
-supybot.commands.defaultPlugins.list: Misc
-supybot.commands.defaultPlugins.reload: Owner
-supybot.commands.defaultPlugins.removecapability: Admin
-supybot.commands.defaultPlugins.unignore: Admin
 
 ###
 # Determines what commands are currently disabled. Such commands will
@@ -665,7 +655,7 @@ supybot.directories.log: /home/maciej/git/supybot/logs
 #
 # Default value:  
 ###
-supybot.plugins: Admin Misc User Owner Config Channel RSS
+supybot.plugins: Admin Misc User Config Channel RSS
 
 ###
 # Determines whether this plugin is loaded by default.
@@ -761,28 +751,6 @@ supybot.plugins.Misc.last.nested.includeNick: False
 ###
 # Determines whether this plugin is loaded by default.
 ###
-supybot.plugins.Owner: True
-
-###
-# Determines whether this plugin is publicly visible.
-#
-# Default value: True
-###
-supybot.plugins.Owner.public: True
-
-###
-# Determines what quit message will be used by default. If the quit
-# command is called without a quit message, this will be used. If this
-# value is empty, the nick of the person giving the quit command will be
-# used.
-#
-# Default value: 
-###
-supybot.plugins.Owner.quitMsg: 
-
-###
-# Determines whether this plugin is loaded by default.
-###
 supybot.plugins.RSS: True
 
 ###
@@ -813,7 +781,7 @@ supybot.plugins.RSS.headlineSeparator:  ||
 #
 # Default value: New news from 
 ###
-supybot.plugins.RSS.announcementPrefix: New news from 
+supybot.plugins.RSS.announcementPrefix: New news on 
 
 ###
 # Determines which RSS feeds should be announced in the channel; valid
@@ -822,7 +790,7 @@ supybot.plugins.RSS.announcementPrefix: New news from
 #
 # Default value:  
 ###
-supybot.plugins.RSS.announce: testnews planetnews
+supybot.plugins.RSS.announce: Planet
 
 ###
 # Determines whether the bot will list the link along with the title of
@@ -845,9 +813,8 @@ supybot.plugins.RSS.waitPeriod: 1800
 #
 # Default value:  
 ###
-supybot.plugins.RSS.feeds: testnews planetnews
-supybot.plugins.RSS.feeds.testnews: http://feeds.reuters.com/Reuters/worldNews?format=xml
-supybot.plugins.RSS.feeds.planetnews: http://planet.timvideos.us/tags/news/feed.xml
+supybot.plugins.RSS.feeds: Planet
+supybot.plugins.RSS.feeds.Planet: http://planet.timvideos.us/tags/news/feed.xml
 
 ###
 # Determines whether the bot will list the link along with the title of
